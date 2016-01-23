@@ -1,4 +1,5 @@
 ﻿using Jorsh.AjaxSon.Business.Entity;
+using Jorsh.AjaxSon.Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -34,9 +35,10 @@ namespace Jorsh.AjaxSon.Business
                 ent.FechaAlta = Convert.ToDateTime(dr["QUEJA_FECHA_ALTA"]);
                 ent.Procedente = Convert.ToBoolean(dr["QUEJA_PROCEDENTE"]);
                 ent.EnvioCorreo = Convert.ToBoolean(dr["QUEJA_ENVIO_CORREO"]);
-                ent.UsuarioId = dr("QUEJA_USUARIO_ID") is DBNull ? 0 : Convert.ToInt32(dr["QUEJA_USUARIO_ID"]);
+                ent.UsuarioId = dr["QUEJA_USUARIO_ID"] is DBNull ? 0 : Convert.ToInt32(dr["QUEJA_USUARIO_ID"]);
                 lst.Add(ent);
             }
+            return lst;
         }
     }
 }
