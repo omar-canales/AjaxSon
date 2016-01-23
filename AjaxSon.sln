@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AjaxSon(1)", "http://localhost:2822", "{AE53C42C-54AE-4582-80F6-3BEA722E23A2}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{9d49484b-d8e4-403c-8eec-b1ec9e33d704}|BusAjaxSon.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_2822"
+		Debug.AspNetCompiler.PhysicalPath = "AjaxSon\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2822\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_2822"
+		Release.AspNetCompiler.PhysicalPath = "AjaxSon\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2822\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "AjaxSon\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 UI", "1 UI", "{3D69CF31-6ECD-4802-A8F2-28000CF94EBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Business", "2 Business", "{38D75A8C-F125-404F-BEE2-DD2E95D1E4A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Data", "3 Data", "{EEDC677E-D909-40A2-8FE2-B101C9675837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusAjaxSon", "BusAjaxSon\BusAjaxSon.csproj", "{9D49484B-D8E4-403C-8EEC-B1EC9E33D704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatAjaxSon", "DatAjaxSon\DatAjaxSon.csproj", "{B59FD6D9-F6D2-4FC7-ABEA-543AB17DAC96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntAjaxSon", "EntAjaxSon\EntAjaxSon.csproj", "{22AA0C96-C6F9-4A12-9747-A0B611371DB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE53C42C-54AE-4582-80F6-3BEA722E23A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE53C42C-54AE-4582-80F6-3BEA722E23A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE53C42C-54AE-4582-80F6-3BEA722E23A2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE53C42C-54AE-4582-80F6-3BEA722E23A2}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9D49484B-D8E4-403C-8EEC-B1EC9E33D704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D49484B-D8E4-403C-8EEC-B1EC9E33D704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D49484B-D8E4-403C-8EEC-B1EC9E33D704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D49484B-D8E4-403C-8EEC-B1EC9E33D704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B59FD6D9-F6D2-4FC7-ABEA-543AB17DAC96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59FD6D9-F6D2-4FC7-ABEA-543AB17DAC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59FD6D9-F6D2-4FC7-ABEA-543AB17DAC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59FD6D9-F6D2-4FC7-ABEA-543AB17DAC96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22AA0C96-C6F9-4A12-9747-A0B611371DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22AA0C96-C6F9-4A12-9747-A0B611371DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22AA0C96-C6F9-4A12-9747-A0B611371DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22AA0C96-C6F9-4A12-9747-A0B611371DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE53C42C-54AE-4582-80F6-3BEA722E23A2} = {3D69CF31-6ECD-4802-A8F2-28000CF94EBB}
+		{9D49484B-D8E4-403C-8EEC-B1EC9E33D704} = {38D75A8C-F125-404F-BEE2-DD2E95D1E4A6}
+		{22AA0C96-C6F9-4A12-9747-A0B611371DB4} = {38D75A8C-F125-404F-BEE2-DD2E95D1E4A6}
+		{B59FD6D9-F6D2-4FC7-ABEA-543AB17DAC96} = {EEDC677E-D909-40A2-8FE2-B101C9675837}
+	EndGlobalSection
+EndGlobal
