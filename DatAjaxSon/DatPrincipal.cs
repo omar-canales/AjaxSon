@@ -38,10 +38,27 @@ namespace Jorsh.AjaxSon.Data
                 da.Fill(dt);
                 return dt;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
-                throw;
+                throw new ApplicationException("Error al Obtener Sistemas: " + ex.Message);
+            }
+        }
+
+        public DataTable ObtenerTableroGestion()
+        {
+            try
+            {
+                SqlCommand com = new SqlCommand("spSelectTableroQuejaGestoria", con);
+                com.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(com);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return (dt);
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Error al Obtener Tablero Gestion: " + ex.Message);
             }
         }
     }
