@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="EntQueja.cs" />
     <Compile Include="EntTableroGestionQueja.cs" />
+    <Compile Include="EntUnidadNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

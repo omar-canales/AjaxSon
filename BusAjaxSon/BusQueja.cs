@@ -40,5 +40,20 @@ namespace Jorsh.AjaxSon.Business
             }
             return lst;
         }
+        public List<EntUnidadNegocio> ObtenerUnidadNegocio()
+        {
+            DataTable dt = new DatPrincipal().ObtenerUnidadNegocio();
+            List<EntUnidadNegocio> lst = new List<EntUnidadNegocio>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                EntUnidadNegocio ent = new EntUnidadNegocio();
+                ent.Id = Convert.ToInt32(dr["SIST_ID"]);
+                ent.Nombre = dr["SIST_NOMBRE"].ToString();
+                ent.Descripcion = dr["SIST_DESCRIPCION"].ToString();
+                ent.Prefijo = dr["SIST_PREFIJO"].ToString();
+                lst.Add(ent);
+            }
+            return lst;
+        }
     }
 }
