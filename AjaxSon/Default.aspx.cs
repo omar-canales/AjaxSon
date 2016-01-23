@@ -1,4 +1,5 @@
-﻿using Jorsh.AjaxSon.Business.Entity;
+﻿using Jorsh.AjaxSon.Business;
+using Jorsh.AjaxSon.Business.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ public partial class _Default : System.Web.UI.Page
     [WebMethod]
     public static string ObtenerUnidadNegocio()
     {
-        List<EntUnidadNegocio> lst = new BusPrincipal().ObtenerUnidadNegocio();
+        List<EntUnidadNegocio> lst = new BusQueja().ObtenerUnidadNegocio();
         JavaScriptSerializer oSerializer = new JavaScriptSerializer();
         string sJSON = oSerializer.Serialize(lst);
         return sJSON;
