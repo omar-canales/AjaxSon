@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AjaxSon(1)", "http://localhost:2822", "{AE53C42C-54AE-4582-80F6-3BEA722E23A2}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AjaxSon", "http://localhost:2822", "{AE53C42C-54AE-4582-80F6-3BEA722E23A2}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
@@ -67,7 +67,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{AE53C42C-54AE-4582-80F6-3BEA722E23A2} = {3D69CF31-6ECD-4802-A8F2-28000CF94EBB}
 		{9D49484B-D8E4-403C-8EEC-B1EC9E33D704} = {38D75A8C-F125-404F-BEE2-DD2E95D1E4A6}
-		{22AA0C96-C6F9-4A12-9747-A0B611371DB4} = {38D75A8C-F125-404F-BEE2-DD2E95D1E4A6}
 		{B59FD6D9-F6D2-4FC7-ABEA-543AB17DAC96} = {EEDC677E-D909-40A2-8FE2-B101C9675837}
+		{22AA0C96-C6F9-4A12-9747-A0B611371DB4} = {38D75A8C-F125-404F-BEE2-DD2E95D1E4A6}
 	EndGlobalSection
 EndGlobal
