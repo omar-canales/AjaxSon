@@ -25,4 +25,13 @@ public partial class _Default : System.Web.UI.Page
         string sJSON = oSerializer.Serialize(lst);
         return sJSON;
     }
+
+    [WebMethod]
+    public static string ObtenerTableroGestion(string id)
+    {
+        List<EntQueja> lst = new BusQueja().ObtenerTableroGestion();
+        JavaScriptSerializer oSerializer = new JavaScriptSerializer();
+        string sJSON = oSerializer.Serialize(lst);
+        return sJSON;
+    }
 }

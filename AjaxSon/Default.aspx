@@ -118,51 +118,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-10 col-md-offset-1" style="overflow-x: scroll; padding-left: 0px; padding-right: 0px; padding-top: 10px;">
-                    <table class="table table-responsive table-hover" id="tablaEncabezado" style="font-size: 0.7em;">
-                        <tr style="background-color: #F2F7FA; text-align: center; font-weight: 900;">
-                            <td colspan="7">Total de Quejas X Causa: 14</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr style="background-color: #F2F7FA; text-align: center; font-weight: 900;">
-                            <td>[Folio Queja]</td>
-                            <td>[Causa]</td>
-                            <td>[No. Servicio]</td>
-                            <td>[Unidad de Negocio]</td>
-                            <td>[Cliente]</td>
-                            <td>[Tipo de Servicio]</td>
-                            <td>[Recepción de Queja]</td>
-                            <td>[Asignar Ejecutivos]</td>
-                            <td>[Asignacion Responsables]</td>
-                            <td>[Contacto Responsable]</td>
-                            <td>[Recabar Informacion]</td>
-                            <td>[Solucion]</td>
-                            <td>[Contacto Solucion]</td>
-                            <td>[Accion Siguiente]</td>
-                        </tr>
-                        <tr>
-                            <td>2016CG1000</td>
-                            <td>El Gestor no fue amable con cliente	</td>
-                            <td>2016131043499</td>
-                            <td>Concierge</td>
-                            <td>Credinissan (GO)</td>
-                            <td>Gestoría para Indemnización PT Daños Materiales	</td>
-                            <td>18/01/2016 17:26</td>
-                            <td>Diana Cynthia Tolentino HernándeZ</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
+                <div class="col-md-10 col-md-offset-1" style="overflow-x: scroll; padding-left: 0px; padding-right: 0px; padding-top: 10px;" id="divTablaGestion">
+                    
                 </div>
             </div>
         </div>
