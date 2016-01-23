@@ -23,8 +23,25 @@ namespace Jorsh.AjaxSon.Data
             }
             catch (Exception ex)
             {
-
                 throw new ApplicationException("Error al Obtener Quejas: " + ex.Message);
+            }
+        }
+
+        public DataTable ObtenerUnidadNegocio()
+        {
+            try
+            {
+                SqlCommand com = new SqlCommand("spSelectSitemas", con);
+                com.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(com);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+                
+                throw;
             }
         }
     }
