@@ -98,11 +98,7 @@
                         </div>
                         <div class="col-md-2">
                             <select id="dllEstado" class="form-control">
-                                <option>[Elije Estado]</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                                <option value="0">[Elije Estado]</option>
                             </select>
                         </div>
                         <div class="col-md-2">

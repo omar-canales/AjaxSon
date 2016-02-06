@@ -27,16 +27,16 @@ namespace Jorsh.AjaxSon.Data
             }
         }
 
-        public DataTable ObtenerUnidadNegocio()
+        public DataSet ObtenerUnidadNegocio()
         {
             try
             {
-                SqlCommand com = new SqlCommand("spSelectSitemas", con);
+                SqlCommand com = new SqlCommand("spSelectSitemasYEstados", con);
                 com.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter da = new SqlDataAdapter(com);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                return dt;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
             }
             catch (Exception ex)
             {
@@ -44,7 +44,7 @@ namespace Jorsh.AjaxSon.Data
             }
         }
 
-        public DataTable ObtenerTableroGestion(DateTime fechaInicial, DateTime fechaFinal, string queja, int unidadNegocio, int tiposervicio, int ejecuticoSAC, string numServicio, int cliente, int etapa, bool definicion)
+        public DataTable ObtenerTableroGestion(DateTime fechaInicial, DateTime fechaFinal, string queja, int unidadNegocio, int tiposervicio, int ejecuticoSAC, string numServicio, int cliente, int etapa, bool definicion, int estado, int municipio)
         {
             try
             {
@@ -58,8 +58,10 @@ namespace Jorsh.AjaxSon.Data
                 com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.Int, Value = ejecuticoSAC, ParameterName = "@EjecutivoSAC" });
                 com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.NVarChar, Value = numServicio, ParameterName = "@NoServicio" });
                 com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.Int, Value = cliente, ParameterName = "@Cliente" });
-                com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.Int, Value = unidadNegocio, ParameterName = "@Etapa" });
-                com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.Int, Value = definicion, ParameterName = "@Definicion" });
+                com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.Int, Value = etapa, ParameterName = "@Etapa" });
+                com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.Bit, Value = definicion, ParameterName = "@Definicion" });
+                com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.Int, Value = estado, ParameterName = "@Estado" });
+                com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.Int, Value = municipio, ParameterName = "@Municipio" });
                 SqlDataAdapter da = new SqlDataAdapter(com);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

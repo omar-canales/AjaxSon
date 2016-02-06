@@ -17,12 +17,17 @@
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (msg) {
-            list = $.parseJSON(msg.d);
+            var list = $.parseJSON(msg.d);
             var tabla = '';
-            $(list).each(function () {
+            var estado = '';
+            $(list[0]).each(function () {
                 tabla += '<option value="' + this.Id + '">' + this.Nombre + '</option>';
             });
             $('#dllUnidadNeg').append(tabla);
+            $(list[1]).each(function () {
+                estado += '<option value="' + this.Id + '">' + this.Nombre + '</option>';
+            });
+            $('#dllEstado').append(estado);
         },
         error: function (msg) {
             alert('Error cargar unidad de negocio, ' + msg.responseText);
@@ -32,10 +37,11 @@
     //Evento Change de unidad de negocio con carga de tablero principal
     $('#dllUnidadNeg').change(function () {
         if ($('#dllUnidadNeg').val() != 0) {
-            var fechaInicial = $('#datetimepicker2').val();
-            var FechaFinal = $('#datetimepicker3').val();
+            var fechaInicial = $('#datetimepicker2').val() == '' ? '01/01/2000' : $('#datetimepicker2').val();
+            var FechaFinal = $('#datetimepicker3').val() == '' ? '02/06/2016' : $('#datetimepicker3').val();
             var Queja = '';
-            var UnidadNegocio = $('#dllUnidadNeg option:selected').html();
+            //var UnidadNegocio = $('#dllUnidadNeg option:selected').html();
+            var UnidadNegocio = $('#dllUnidadNeg').val();
             var TipoServicio = '';
             var EjecutivoSAC = '';
             var NoServicio = '';

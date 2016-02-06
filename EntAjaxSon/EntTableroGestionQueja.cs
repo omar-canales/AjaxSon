@@ -12,8 +12,10 @@ namespace Jorsh.AjaxSon.Business.Entity
         public string Queja { get; set; }
         public string Descripcion { get; set; }
         public string NumServicio { get; set; }
-        public string Sistema { get; set; }
-        public string Cliente { get; set; }
+        public string UnidadNegocio { get; set; }
+        public int Sistema { get; set; }
+        public string ClienteNombre { get; set; }
+        public int Cliente { get; set; }
         public string NombServicio { get; set; }
         public DateTime FechaAlta { get; set; }
         public string fAlta { get; set; }
@@ -44,5 +46,6 @@ namespace Jorsh.AjaxSon.Business.Entity
         public bool Definicion { get; set; }
         public int Estado { get; set; }
         public int Municipio { get; set; }
+        public int TipoServicio { get; set; }
     }
 }

@@ -40,46 +40,46 @@ namespace Jorsh.AjaxSon.Business
             }
             return lst;
         }
-        public List<EntUnidadNegocio> ObtenerUnidadNegocio()
+        public List<List<EntUnidadNegocio>> ObtenerUnidadNegocio()
         {
-            DataTable dt = new DatPrincipal().ObtenerUnidadNegocio();
-            List<EntUnidadNegocio> lst = new List<EntUnidadNegocio>();
-            foreach (DataRow dr in dt.Rows)
+            DataSet ds = new DatPrincipal().ObtenerUnidadNegocio();
+            List<List<EntUnidadNegocio>> multilst = new List<List<EntUnidadNegocio>>();
+            foreach (DataTable dt in ds.Tables)
             {
-                EntUnidadNegocio ent = new EntUnidadNegocio();
-                ent.Id = Convert.ToInt32(dr["SIST_ID"]);
-                ent.Nombre = dr["SIST_NOMBRE"].ToString();
-                ent.Descripcion = dr["SIST_DESCRIPCION"].ToString();
-                ent.Prefijo = dr["SIST_PREFIJO"].ToString();
-                lst.Add(ent);
+                List<EntUnidadNegocio> lst = new List<EntUnidadNegocio>();
+                foreach (DataRow dr in dt.Rows)
+                {
+                    EntUnidadNegocio ent = new EntUnidadNegocio();
+                    ent.Id = Convert.ToInt32(dr["SIST_ID"]);
+                    ent.Nombre = dr["SIST_NOMBRE"].ToString();
+                    ent.Descripcion = dr["SIST_DESCRIPCION"].ToString();
+                    ent.Prefijo = dr["SIST_PREFIJO"].ToString();
+                    lst.Add(ent);
+                }
+                multilst.Add(lst);
             }
-            return lst;
+            return multilst;
         }
-
-        public List<EntQueja> ObtenerTableroGestion(EntTableroGestionQueja ent)
+        public List<EntTableroGestionQueja> ObtenerTableroGestion(EntTableroGestionQueja ent)
         {
-            DataTable dt = new DatPrincipal().ObtenerTableroGestion(ent.FechaInicial, ent.FechaFinal, ent.Queja, ent.Sistema, ent.NombreEjecutivoSAC, ent.EjecSAC, ent.NumServicio, ent.Cliente, ent.Etapa, ent.Definicion, ent.Estado, ent.Municipio);
-            List<EntQueja> lst = new List<EntQueja>();
+            DataTable dt = new DatPrincipal().ObtenerTableroGestion(ent.FechaInicial, ent.FechaFinal, ent.Queja, ent.Sistema, 0, ent.EjecSAC, ent.NumServicio, ent.Cliente, ent.Etapa, ent.Definicion, ent.Estado, ent.Municipio);
+            List<EntTableroGestionQueja> lst = new List<EntTableroGestionQueja>();
             foreach (DataRow dr in dt.Rows)
             {
-                EntQueja enti = new EntQueja();
-                enti.Id = Convert.ToInt32(dr["QUEJA_ID"]);
-                enti.Anio = Convert.ToInt32(dr["QUEJA_ANIO"]);
-                enti.Prefijo = dr["QUEJA_PREFIJO"].ToString();
-                enti.Numero = Convert.ToInt32(dr["QUEJA_NUMERO"]);
-                enti.Reporte = dr["QUEJA_REPORTE"].ToString();
-                enti.ViaActivacionId = Convert.ToInt32(dr["QUEJA_VIA_ACTIVACION_ID"]);
-                enti.ResponsableId = dr["QUEJA_RESPONSABLE_ID"] is DBNull ? 0 : Convert.ToInt32(dr["QUEJA_RESPONSABLE_ID"]);
-                enti.Descripcion = dr["QUEJA_DESCRIPCION"].ToString();
-                enti.EstatusSeguimiento = Convert.ToBoolean(dr["QUEJA_ESTATUS_SEGUIMIENTO"]);
-                enti.UnidadNegocioId = Convert.ToInt32(dr["QUEJA_UNIDAD_NEGOCIO_ID"]);
-                enti.NumeroServicio = dr["QUEJA_NUMERO_SERVICIO"].ToString();
-                enti.EjecutivoSACId = dr["QUEJA_EJECUTIVO_SAC_ID"] is DBNull ? 0 : Convert.ToInt32(dr["QUEJA_EJECUTIVO_SAC_ID"]);
-                enti.Definicion = Convert.ToBoolean(dr["QUEJA_DEFINICION"]);
+                EntTableroGestionQueja enti = new EntTableroGestionQueja();
+                enti.Queja = dr["QUEJA_REPORTE"].ToString();
+                enti.Descripcion = dr["CATA_CAUSA_DESCRIPCION"].ToString();
+                enti.NumServicio = dr["QUEJA_NUMERO_SERVICIO"].ToString();
+                enti.UnidadNegocio = dr["SIST_NOMBRE"].ToString();
+                enti.ClienteNombre = dr["cliente_NomCliente"].ToString();
+                enti.NombServicio = dr["Servicio_NomServicio"].ToString();
                 enti.FechaAlta = Convert.ToDateTime(dr["QUEJA_FECHA_ALTA"]);
-                enti.Procedente = Convert.ToBoolean(dr["QUEJA_PROCEDENTE"]);
-                enti.EnvioCorreo = Convert.ToBoolean(dr["QUEJA_ENVIO_CORREO"]);
-                enti.UsuarioId = Convert.ToInt32(dr["QUEJA_USUARIO_ID"]);
+                enti.fAlta = enti.FechaAlta.ToString("dd/MM/yyyy HH:mm");
+                enti.NombreEjecutivoSAC = dr["CATA_EJECSAC_NOMBRE"].ToString();
+                enti.FechaAsigResp = dr["BITA_FECHA_ASIGNACION_RESPONSABLE"] is DBNull ? Convert.ToDateTime("01/01/1900") : Convert.ToDateTime(dr["BITA_FECHA_ASIGNACION_RESPONSABLE"]);
+                enti.fAsigResp = enti.FechaAsigResp.ToString("dd/MM/yyyy HH:mm");
+                enti.FechaContResp = dr["BITA_FECHA_CONTACTAR_RESPONSABLE"] is DBNull ? Convert.ToDateTime("01/01/1900") : Convert.ToDateTime(dr["BITA_FECHA_CONTACTAR_RESPONSABLE"]);
+                enti.fContResp = enti.FechaContResp.ToString("dd/MM/yyyy HH:mm");
                 lst.Add(enti);
             }
             return lst;
