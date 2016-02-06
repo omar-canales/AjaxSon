@@ -18,15 +18,15 @@
                         Filtro de Información
                     </div>
                     <div style="background-color: lightgoldenrodyellow" class="col-md-10 col-md-offset-1 panel-body panel-default">
-                        <div class="col-md-2 col-md-offset-2">
+                        <div class="col-md-3">
                             <input type="text" id="txtFolQueja" placeholder="Folio Queja" class="form-control" />
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <select id="dllUnidadNeg" class="form-control">
                                 <option value="0">[Elije Unidad de Negocio]</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <select id="dllTipoServ" class="form-control">
                                 <option>[Elije Tipo de Servicio]</option>
                                 <option>1</option>
@@ -35,7 +35,7 @@
                                 <option>4</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <select id="dllEjecSac" class="form-control">
                                 <option>[Elije Ejecutivo SAC]</option>
                                 <option>1</option>
@@ -45,10 +45,10 @@
                             </select>
                             <br />
                         </div>
-                        <div class="col-md-2 col-md-offset-2">
+                        <div class="col-md-3">
                             <input type="text" id="txtNumServicio" placeholder="Número de Servicio" class="form-control" />
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <select id="dllCliente" class="form-control">
                                 <option>[Elije Cliente]</option>
                                 <option>1</option>
@@ -57,7 +57,7 @@
                                 <option>4</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <select id="dllEtapa" class="form-control">
                                 <option>[Elije Etapa]</option>
                                 <option>1</option>
@@ -66,7 +66,7 @@
                                 <option>4</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <select id="dllDefincion" class="form-control">
                                 <option>[Elije Definición]</option>
                                 <option>1</option>
@@ -76,7 +76,7 @@
                             </select>
                             <br />
                         </div>
-                        <div class="col-md-2 col-md-offset-2">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <div class='input-group date' id='datetimepicker2'>
                                     <input type='text' class="form-control" />
@@ -86,7 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <div class='input-group date' id='datetimepicker3'>
                                     <input type='text' class="form-control" />
@@ -96,12 +96,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <select id="dllEstado" class="form-control">
                                 <option value="0">[Elije Estado]</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <select id="dllMunicipio" class="form-control">
                                 <option>[Elije Municipio]</option>
                                 <option>1</option>
