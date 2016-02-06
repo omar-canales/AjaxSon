@@ -27,9 +27,13 @@ public partial class _Default : System.Web.UI.Page
     }
 
     [WebMethod]
-    public static string ObtenerTableroGestion(string id)
+    public static string ObtenerTableroGestion(string fechaInicial, string FechaFinal, string Queja, string UnidadNegocio, string TipoServicio, string EjecutivoSAC, string NoServicio, string Cliente, string Etapa, string Definicion, string Estado, string Municipio)
     {
-        List<EntQueja> lst = new BusQueja().ObtenerTableroGestion();
+        EntTableroGestionQueja ent = new EntTableroGestionQueja();
+        ent.FechaInicial = Convert.ToDateTime(fechaInicial);
+        ent.FechaFinal = Convert.ToDateTime(FechaFinal);
+        ent.Sistema = UnidadNegocio;
+        List<EntQueja> lst = new BusQueja().ObtenerTableroGestion(ent);
         JavaScriptSerializer oSerializer = new JavaScriptSerializer();
         string sJSON = oSerializer.Serialize(lst);
         return sJSON;

@@ -32,8 +32,20 @@
     //Evento Change de unidad de negocio con carga de tablero principal
     $('#dllUnidadNeg').change(function () {
         if ($('#dllUnidadNeg').val() != 0) {
+            var fechaInicial = $('#datetimepicker2').val();
+            var FechaFinal = $('#datetimepicker3').val();
+            var Queja = '';
+            var UnidadNegocio = $('#dllUnidadNeg option:selected').html();
+            var TipoServicio = '';
+            var EjecutivoSAC = '';
+            var NoServicio = '';
+            var Cliente = '';
+            var Etapa = '';
+            var Definicion = '';
+            var Estado = '';
+            var Municipio = '';
 
-            var misDatos = '{"id":"' + $('#dllUnidadNeg').val() + '"}';
+            var misDatos = '{"fechaInicial":"' + fechaInicial + '","FechaFinal":"' + FechaFinal + '","Queja":"' + Queja + '","UnidadNegocio":"' + UnidadNegocio + '","TipoServicio":"' + TipoServicio + '","EjecutivoSAC":"' + EjecutivoSAC + '","NoServicio":"' + NoServicio + '","Cliente":"' + Cliente + '","Etapa":"' + Etapa + '","Definicion":"' + Definicion + '","Estado":"' + Estado + '","Municipio":"' + Municipio + '"}';
             $.ajax({
                 type: "POST",
                 url: "Default.aspx/ObtenerTableroGestion",
