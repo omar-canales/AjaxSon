@@ -1,43 +1,14 @@
-﻿[
-    [
-        { "Id": 1, "Nombre": "Concierge", "Descripcion": "", "Prefijo": "CG" },
-        { "Id": 2, "Nombre": "AutoSigue", "Descripcion": "", "Prefijo": "SG" },
-        { "Id": 3, "Nombre": "Provial", "Descripcion": "", "Prefijo": "PL" },
-        { "Id": 4, "Nombre": "Arion", "Descripcion": "", "Prefijo": "AR" },
-        { "Id": 5, "Nombre": "Asistencia", "Descripcion": "", "Prefijo": "AS" }
-    ],
-    [
-        { "Id": 21, "Nombre": "AGUASCALIENTES      ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 22, "Nombre": "BAJA CALIFORNIA NTE ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 23, "Nombre": "BAJA CALIFORNIA SUR ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 24, "Nombre": "CAMPECHE            ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 25, "Nombre": "COAHUILA            ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 26, "Nombre": "COLIMA              ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 27, "Nombre": "CHIAPAS             ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 28, "Nombre": "CHIHUAHUA           ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 29, "Nombre": "DISTRITO FEDERAL    ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 30, "Nombre": "DURANGO             ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 31, "Nombre": "ESTADO DE MEXICO    ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 32, "Nombre": "GUANAJUATO          ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 33, "Nombre": "GUERRERO            ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 34, "Nombre": "HIDALGO             ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 35, "Nombre": "JALISCO             ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 36, "Nombre": "MICHOACAN           ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 37, "Nombre": "MORELOS             ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 38, "Nombre": "NAYARIT             ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 39, "Nombre": "NUEVO LEON          ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 40, "Nombre": "OAXACA              ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 41, "Nombre": "PUEBLA              ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 42, "Nombre": "QUERETARO           ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 43, "Nombre": "QUINTANA ROO        ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 44, "Nombre": "SAN LUIS POTOSI     ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 45, "Nombre": "SINALOA             ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 46, "Nombre": "SONORA              ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 47, "Nombre": "TABASCO             ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 48, "Nombre": "TAMAULIPAS          ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 49, "Nombre": "TLAXCALA            ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 50, "Nombre": "VERACRUZ            ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 51, "Nombre": "YUCATAN             ", "Descripcion": "", "Prefijo": "" },
-        { "Id": 52, "Nombre": "ZACATECAS           ", "Descripcion": "", "Prefijo": "" }
-    ]
-]
+﻿{
+    "fechaInicial": "01/02/2016 13:26",
+    "FechaFinal": "02/02/2016 13:27",
+    "Queja": "",
+    "UnidadNegocio": "1",
+    "TipoServicio": "",
+    "EjecutivoSAC": "",
+    "NoServicio": "",
+    "Cliente": "",
+    "Etapa": "",
+    "Definicion": "",
+    "Estado": "",
+    "Municipio": ""
+}

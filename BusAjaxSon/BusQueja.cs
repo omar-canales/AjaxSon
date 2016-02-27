@@ -67,6 +67,7 @@ namespace Jorsh.AjaxSon.Business
             foreach (DataRow dr in dt.Rows)
             {
                 EntTableroGestionQueja enti = new EntTableroGestionQueja();
+                enti.CausaId = Convert.ToInt32(dr["CAUSA_ID"]);
                 enti.Queja = dr["QUEJA_REPORTE"].ToString();
                 enti.Descripcion = dr["CATA_CAUSA_DESCRIPCION"].ToString();
                 enti.NumServicio = dr["QUEJA_NUMERO_SERVICIO"].ToString();

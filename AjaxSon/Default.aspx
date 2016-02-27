@@ -78,8 +78,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <div class='input-group date' id='datetimepicker2'>
-                                    <input type='text' class="form-control" />
+                                <div class='input-group date'>
+                                    <input type='text' class="form-control" id='datetimepicker2' />
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
@@ -88,8 +88,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <div class='input-group date' id='datetimepicker3'>
-                                    <input type='text' class="form-control" />
+                                <div class='input-group date'>
+                                    <input type='text' class="form-control"  id='datetimepicker3' />
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
@@ -109,6 +109,9 @@
                                 <option>3</option>
                                 <option>4</option>
                             </select>
+                        </div>
+                        <div class="col-xs-4 col-xs-offset-4" style="text-align:center;">
+                            <label class="btn btn-info btn-sm" id="lblBuscar" style="width:75%;">Buscar</label>   
                         </div>
                     </div>
                 </div>
