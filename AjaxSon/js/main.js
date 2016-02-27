@@ -123,8 +123,37 @@
             }
         });// Fin Ajax
         $('[id*=lnkCausa]').on("click", function () {
-            alert('Me hiciste click :), ' + $(this).attr("id"));
+
+            $('#datosReporte').modal('show');
+            //alert('Me hiciste click :), ' + $(this).attr("id"));
         });
     }//Fin de CargarTabla()
 
+    //var popoverContent = ['<div class="row">',
+    //    '<button type="button" id="btnClicAqui" class="btn btn-default">Clic Aqui</button>',
+    //    '<button type="button" id="btnClicAqui" class="btn btn-default">Clic Aqui</button>">',
+    //    '</div>'].join('');
+
+    //$('#btnPopover').popover({
+    //    html: true,
+    //    content: popoverTemplate
+    //});
+    //if ($('#btnCerrar').on("click", function () {
+    //    $('#datosReporte').modal('handleUpdate');
+    //}));
+
+    if ($('#datosReporte').on('hidden.bs.modal','.modal', function () {
+        $('#txtCausa,#txtNoServicio').val() = '';
+    }));
+
+    $('#btnPopover').on("click", function () {
+        $('#btnPopover').popover('show');
+
+        $('#btnHola').on("click", function () {
+            alert('Hola Mundo');
+        });
+    });
+    $('#btnClicAqui').on("click", function () {
+        alert('Wuaoooooo');
+    });
 });//Fin del ready

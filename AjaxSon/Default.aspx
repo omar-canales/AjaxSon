@@ -89,7 +89,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <div class='input-group date'>
-                                    <input type='text' class="form-control"  id='datetimepicker3' />
+                                    <input type='text' class="form-control" id='datetimepicker3' />
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
@@ -110,15 +110,64 @@
                                 <option>4</option>
                             </select>
                         </div>
-                        <div class="col-xs-4 col-xs-offset-4" style="text-align:center;">
-                            <label class="btn btn-info btn-sm" id="lblBuscar" style="width:75%;">Buscar</label>   
+                        <div class="col-xs-4 col-xs-offset-4" style="text-align: center;">
+                            <label class="btn btn-info btn-sm" id="lblBuscar" style="width: 75%;">Buscar</label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1" style="overflow-x: scroll; padding-left: 0px; padding-right: 0px; padding-top: 10px;" id="divTablaGestion">
-                    
+                </div>
+            </div>
+            <div class="modal fade" id="datosReporte" tabindex="-1" role="dialog" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" id="btnCerrar" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="exampleModalLabel">Datos del Servicio</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="panel">
+                                <div class="row">
+                                    <div class="panel">
+                                        <div class="col-md-6">
+                                            <label id="lblCausa">Cuasa:</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class='input-group'>
+                                                    <input type='text' class="form-control" id='txtCausa' />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-warning-sign"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label id="lblNoServicio">Número de Servicio:</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class='input-group'>
+                                                    <input type='text' class="form-control" id='txtNoServicio' />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="btnClicAqui" class="btn btn-default">Clic Aqui</button>
+                            <a tabindex="0" id="btnPopover" class="btn btn-primary" role="button" data-toggle="popover" title="Popover Abierto" data-html="true" data-conteiner="body" data-content="<div style='width:500px;' class='row'><div id='divbtn1' class='col-xs-6' style='text-align:center; font-size:.7em; margin-top:10px; width:auto;'><label id='btnHola' class='btn btn-danger btn-xs'>Hola</label></div><div id='divbtn2' class='col-xs-6' style='text-align:center; font-size:.7em; margin-top:10px;width:auto;'><label id='btnHola2' class='btn btn-danger btn-xs'>Hola2</label></div></div>">Abrir Popover</a>
+                            
+                        </div>
+                        <%--data-trigger="focus"--%>
+                    </div>
                 </div>
             </div>
         </div>
