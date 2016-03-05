@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    "use strict";
     //Configuracion de Datetimepickers
     $('[id*=datetimepicker]').datetimepicker({
         locale: 'es',
@@ -67,7 +68,7 @@
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (msg) {
-                list = $.parseJSON(msg.d);
+                var list = $.parseJSON(msg.d);
                 var tabla = '';
                 tabla += '<table class="table table-responsive table-hover" id="tablaEncabezado" style="font-size: 0.7em;">';
                 tabla += ' <tr style="background-color: #F2F7FA; text-align: center; font-weight: 600;">';
@@ -123,37 +124,59 @@
             }
         });// Fin Ajax
         $('[id*=lnkCausa]').on("click", function () {
-
             $('#datosReporte').modal('show');
+            var datos = '';
+            var datosDos = '';
+            datos += '<div class="col-md-6">';
+            datos += '     <label id="lblCausa">Cuasa:</label>';
+            datos += ' </div>';
+            datos += '<div class="col-md-6">';
+            datos += ' <div class="form-group">';
+            datos += '  <div class="input-group">';
+            datos += '    <input type="text" class="form-control" id="txtCausa" />';
+            datos += '    <span class="input-group-addon">';
+            datos += '        <span class="glyphicon glyphicon-warning-sign"></span>';
+            datos += '    </span>';
+            datos += '  </div>';
+            datos += ' </div>';
+            datos += '</div>';
+            datos += '<div class="col-md-6">';
+            datos += '     <label id="lblNoServicio">Número de Servicio:</label>';
+            datos += '</div>';
+            datos += '<div class="col-md-6">';
+            datos += ' <div class="form-group">';
+            datos += '  <div class="input-group">';
+            datos += '    <input type="text" class="form-control" id="txtNoServicio" />';
+            datos += '    <span class="input-group-addon">';
+            datos += '        <span class="glyphicon glyphicon-list-alt"></span>';
+            datos += '    </span>';
+            datos += '  </div>';
+            datos += ' </div>';
+            datos += '</div>';
+
+            datosDos += '<button type="button" id="btnClicAqui" class="btn btn-default">Clic Aqui</button>';
+            datosDos += "<a tabindex=\"0\" id=\"btnPopover\" class=\"btn btn-primary\" role=\"button\" data-toggle=\"popover\" title=\"Popover Abierto\" data-html=\"true\" data-container=\"body\" data-content=\"<div style='width:500px;' class='row'><div id='divbtn1' class='col-xs-6' style='text-align:center; font-size:.7em; margin-top:10px; width:auto;''><label id='btnHola' class='btn btn-danger btn-xs'>Hola</label></div><div id='divbtn2' class='col-xs-6' style='text-align:center; font-size:.7em; margin-top:10px;width:auto;'><label id='btnHola2' class='btn btn-danger btn-xs'>Hola2</label></div></div>\">Abrir Popover</a>";
+
+            $('#divPanel').empty();
+            $('#divPanel').append(datos);
+            $('#divFooter').empty();
+            $('#divFooter').append(datosDos);
+
+            $('#btnPopover').on("click", function () {
+                $('#btnPopover').popover('show');
+                $('#btnHola').on("click", function () {
+                    alert('Hola Mundo');
+                });
+            });
+            $('#btnClicAqui').on("click", function () {
+                alert('Wuaoooooo');
+            });
+            $('#txtCausa').val($($(this).parent().siblings()[0]).html());
+            $('#txtNoServicio').val($($(this).parent().siblings()[1]).html());
             //alert('Me hiciste click :), ' + $(this).attr("id"));
         });
     }//Fin de CargarTabla()
-
-    //var popoverContent = ['<div class="row">',
-    //    '<button type="button" id="btnClicAqui" class="btn btn-default">Clic Aqui</button>',
-    //    '<button type="button" id="btnClicAqui" class="btn btn-default">Clic Aqui</button>">',
-    //    '</div>'].join('');
-
-    //$('#btnPopover').popover({
-    //    html: true,
-    //    content: popoverTemplate
-    //});
-    //if ($('#btnCerrar').on("click", function () {
-    //    $('#datosReporte').modal('handleUpdate');
-    //}));
-
-    if ($('#datosReporte').on('hidden.bs.modal','.modal', function () {
-        $('#txtCausa,#txtNoServicio').val() = '';
-    }));
-
-    $('#btnPopover').on("click", function () {
-        $('#btnPopover').popover('show');
-
-        $('#btnHola').on("click", function () {
-            alert('Hola Mundo');
-        });
-    });
-    $('#btnClicAqui').on("click", function () {
-        alert('Wuaoooooo');
+    $('#btnCerrar').on("click", function () {
+        $('[id*=popover]').popover('hide');
     });
 });//Fin del ready

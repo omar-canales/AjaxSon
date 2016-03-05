@@ -130,41 +130,12 @@
                         <div class="modal-body">
                             <div class="panel">
                                 <div class="row">
-                                    <div class="panel">
-                                        <div class="col-md-6">
-                                            <label id="lblCausa">Cuasa:</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class='input-group'>
-                                                    <input type='text' class="form-control" id='txtCausa' />
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-warning-sign"></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label id="lblNoServicio">Número de Servicio:</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class='input-group'>
-                                                    <input type='text' class="form-control" id='txtNoServicio' />
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-list-alt"></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="panel" id="divPanel">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" id="btnClicAqui" class="btn btn-default">Clic Aqui</button>
-                            <a tabindex="0" id="btnPopover" class="btn btn-primary" role="button" data-toggle="popover" title="Popover Abierto" data-html="true" data-conteiner="body" data-content="<div style='width:500px;' class='row'><div id='divbtn1' class='col-xs-6' style='text-align:center; font-size:.7em; margin-top:10px; width:auto;'><label id='btnHola' class='btn btn-danger btn-xs'>Hola</label></div><div id='divbtn2' class='col-xs-6' style='text-align:center; font-size:.7em; margin-top:10px;width:auto;'><label id='btnHola2' class='btn btn-danger btn-xs'>Hola2</label></div></div>">Abrir Popover</a>
-                            
+                        <div class="modal-footer" id="divFooter">
                         </div>
                         <%--data-trigger="focus"--%>
                     </div>
